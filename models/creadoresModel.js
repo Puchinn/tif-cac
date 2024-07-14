@@ -8,4 +8,4 @@ const CreadoresModel =db.define("paises",{
     webLink:{type:DataTypes.STRING},
     })            
 
-module.exports = PosteosModel
+module.exports = CreadoresModel

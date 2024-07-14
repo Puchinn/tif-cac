@@ -7,4 +7,4 @@ const FeedBackModel =db.define("paises",{
     contenido:{type:DataTypes.STRING},    
     })                
 
-module.exports = PosteosModel
+module.exports = FeedBackModel

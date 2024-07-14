@@ -1,23 +1,23 @@
 const { DELETE } = require("sequelize/lib/query-types")
-const paisesModel = require ("../models/paisesModel.js")
+const creadoresModel = require ("../models/creadoresModel.js")
 
 /* CRUD - CREATE - READ - UPDATE - DELETE */
 
 /* FUNCION PARA TRAER TODOS LOS POSTEOS = READ - GET */
-const traerPaises = async (req,res)=> {
+const traerCreadores = async (req,res)=> {
 try {
-const paises =  await paisesModel.findAll()
-res.json(paises)
+const creadores =  await creadoresModel.findAll()
+res.json(creadores)
 } catch (error) {
     res.json({message:error.message})
 }
 }
 
 /* FUNCION PARA TRAER UN POSTEO = READ - GET */
-const traerUnPais = async (req,res)=>{
+const traerUnCreador = async (req,res)=>{
 try {
-    const pais = await paisesModel.findByPk(req.params.id)
-    res.json(pais)
+    const creador = await creadoresModel.findByPk(req.params.id)
+    res.json(creador)
 } catch (error) {
     res.json({message:error.message})
 }
@@ -25,9 +25,9 @@ try {
 
 /* FUNCION QUE CREA UN REGISTRO  = CREATE - POST */
 
-const crearPais = async (req,res)=>{
+const crearCreador = async (req,res)=>{
     try {
-        await paisesModel.create(req.body)
+        await creadoresModel.create(req.body)
         res.json("Registro Creado Correctamente")
     } catch (error) {
         res.json({message:error.message})
@@ -36,9 +36,9 @@ const crearPais = async (req,res)=>{
 
 /* FUNCION QUE ACTUALIZA UN REGISTRO - UPDATE - PUT */
 
-const actualizarPais = async(req,res)=>{
+const actualizarCreador = async(req,res)=>{
     try {
-        await paisesModel.update(req.body,{
+        await creadoresModel.update(req.body,{
             where:{id:req.params.id}
         })
         res.json("Registro Actualizado correctamente")
@@ -48,13 +48,13 @@ const actualizarPais = async(req,res)=>{
 }
 
 /* FUNCION PARA BORRAR UN REGISTRO - DELETE - DELETE */
-const borrarPais = async (req,res)=>{
+const borrarCreador = async (req,res)=>{
     try {
-        await paisesModel.destroy( { where:{id:req.params.id}})
+        await creadoresModel.destroy( { where:{id:req.params.id}})
         res.json("registro borrado correctamente")
     } catch (error) {
         res.json({message:error.message})
     }
 }
 
-module.exports= {traerPaises,traerUnPais,crearPais,actualizarPais,borrarPais}
+module.exports= {traerCreadores,traerUnCreador,crearCreador,actualizarCreador,borrarCreador}

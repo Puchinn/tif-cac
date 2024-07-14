@@ -7,4 +7,4 @@ const UsuariosModel =db.define("paises",{
     clave:{type:DataTypes.INTEGER},    
     })
 
-module.exports = PosteosModel
+module.exports = UsuariosModel

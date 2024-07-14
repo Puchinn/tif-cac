@@ -8,4 +8,4 @@ capital:{type:DataTypes.STRING},
 poblacion:{type:DataTypes.INTEGER},
 })                    
 
-module.exports = PosteosModel
+module.exports = PaisesModel
