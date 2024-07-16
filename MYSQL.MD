@@ -12,8 +12,8 @@ CREATE TABLE `paises`.`paises` (
   `nombre` VARCHAR(45) NULL,
   `capital` VARCHAR(45) NULL,
   `poblacion` INT NULL,
-  `createAt` DATETIME NULL,
-  `updateAt` DATETIME NULL,
+  `createdAt` DATETIME NULL,
+  `updatedAt` DATETIME NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
@@ -24,8 +24,8 @@ CREATE TABLE `paises`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nombreCompleto` VARCHAR(45) NULL,
   `clave` INT NULL,
-  `createAt` DATETIME NULL,
-  `updateAt` DATETIME NULL,
+  `createdAt` DATETIME NULL,
+  `updatedAt` DATETIME NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
@@ -36,8 +36,8 @@ CREATE TABLE `paises`.`feedbacks` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `usuario_id` INT NULL,
   `contenido` VARCHAR(45) NULL,  
-  `createAt` DATETIME NULL,
-  `updateAt` DATETIME NULL,
+  `createdAt` DATETIME NULL,
+  `updatedAt` DATETIME NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
@@ -47,23 +47,23 @@ CREATE TABLE `paises`.`creadores` (
   `nombreCompleto` VARCHAR(45) NULL,
   `acerca` VARCHAR(45) NULL,
   `webLink` VARCHAR(45) NULL,
-  `createAt` DATETIME NULL,
-  `updateAt` DATETIME NULL,
+  `createdAt` DATETIME NULL,
+  `updatedAt` DATETIME NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 
 creo dos registros desde my sql para consultarlos desde mi API (GET)
-INSERT INTO `paises`.`paises` (`id`, `nombre`, `capital`,`poblacion`) VALUES ('1', 'Argentina', 'Buenos Aires', '46.000.000');
-INSERT INTO `paises`.`paises` (`id`, `nombre`, `capital`,`poblacion`) VALUES ('2', 'Uruguay', 'Montevideo', '3.423.000');
+INSERT INTO `paises`.`paises` (`id`, `nombre`, `capital`,`poblacion`) VALUES ('1', 'Argentina', 'Buenos Aires', '46000000');
+INSERT INTO `paises`.`paises` (`id`, `nombre`, `capital`,`poblacion`) VALUES ('2', 'Uruguay', 'Montevideo', '3423000');
 
 creo dos registros desde my sql para consultarlos desde mi API (GET)
 INSERT INTO `paises`.`usuarios` (`id`, `nombreCompleto`, `clave`) VALUES ('1', 'Valentin', '1234');
 INSERT INTO `paises`.`usuarios` (`id`, `nombreCompleto`, `clave`) VALUES ('2', 'Esteban', '4321');
 
 creo dos registros desde my sql para consultarlos desde mi API (GET)
-INSERT INTO `paises`.`feedbacks` (`id`, `usuario_id`, `contenido`) VALUES ('1', 'Carlos', 'Contenido del posteo en myql');
-INSERT INTO `paises`.`feedbacks` (`id`, `usuario_id`, `contenido`) VALUES ('2', 'Rosario', 'Otro contenido desde mysql');
+INSERT INTO `paises`.`feedbacks` (`id`, `usuario_id`, `contenido`) VALUES ('1', '1', 'Contenido del posteo en myql');
+INSERT INTO `paises`.`feedbacks` (`id`, `usuario_id`, `contenido`) VALUES ('2', '1', 'Otro contenido desde mysql');
 
 creo dos registros desde my sql para consultarlos desde mi API (GET)
 INSERT INTO `paises`.`creadores` (`id`, `nombreCompleto`, `acerca`, `weblink`) VALUES ('1', 'Valentin', 'Soy Estudiante','');
