@@ -3,8 +3,10 @@ const db = require ("../data/db.js")
 const {DataTypes} = require ("sequelize")
 
 const FeedBackModel =db.define("feedbacks",{
-    usuario_id:{type:DataTypes.INTEGER},
-    contenido:{type:DataTypes.STRING},    
+    nombre:{type:DataTypes.STRING},
+    apellido:{type:DataTypes.STRING},
+    correo:{type:DataTypes.STRING},
+    mensaje:{type:DataTypes.STRING},    
     })                
 
 module.exports = FeedBackModel

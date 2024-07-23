@@ -34,8 +34,10 @@ Creamos la tabla : feedbacks
 
 CREATE TABLE `paises`.`feedbacks` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `usuario_id` INT NULL,
-  `contenido` VARCHAR(45) NULL,  
+  `nombre` VARCHAR(45) NULL,
+  `apellido` VARCHAR(45) NULL,
+  `correo` VARCHAR(45) NULL,
+  `mensaje` VARCHAR(150) NULL,  
   `createdAt` DATETIME NULL,
   `updatedAt` DATETIME NULL,
   PRIMARY KEY (`id`))
@@ -62,8 +64,8 @@ INSERT INTO `paises`.`usuarios` (`id`, `nombreCompleto`, `clave`) VALUES ('1', '
 INSERT INTO `paises`.`usuarios` (`id`, `nombreCompleto`, `clave`) VALUES ('2', 'Esteban', '4321');
 
 creo dos registros desde my sql para consultarlos desde mi API (GET)
-INSERT INTO `paises`.`feedbacks` (`id`, `usuario_id`, `contenido`) VALUES ('1', '1', 'Contenido del posteo en myql');
-INSERT INTO `paises`.`feedbacks` (`id`, `usuario_id`, `contenido`) VALUES ('2', '1', 'Otro contenido desde mysql');
+INSERT INTO `paises`.`feedbacks` (`id`, `nombre`, `apellido`,`correo`,`mensaje`) VALUES ('1', 'valentin', 'Andes','vandes@gmail.com','');
+INSERT INTO `paises`.`feedbacks` (`id`, `nombre`, `apellido`,`correo`,`mensaje`) VALUES ('2', 'carlos', 'Esteban','caresteban@gmail.com','');
 
 creo dos registros desde my sql para consultarlos desde mi API (GET)
 INSERT INTO `paises`.`creadores` (`id`, `nombreCompleto`, `acerca`, `weblink`) VALUES ('1', 'Valentin', 'Soy Estudiante','');
